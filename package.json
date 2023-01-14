@@ -1,0 +1,50 @@
+{
+    "name": "chatwoot-whatsapp-web",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/server.js",
+    "scripts": {
+        "dev": "nodemon --watch src --ext ts,tsx --exec ts-node src/server.tsx",
+        "start": "tsc && pm2 start dist/server.js --no-daemon",
+        "stop": "pm2 stop all",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "format": "prettier --write src/ --loglevel warn",
+        "lint": "npx eslint . --ext .ts --fix",
+        "prepare": "husky install"
+    },
+    "author": "masterkitano <tprado@ignus.mx> (https://ignus.mx)",
+    "contributors": [
+        "Carlos Rivera <me@carlosrivera.im> (https://github.com/carlosrivera)"
+    ],
+    "license": "Apache-2.0",
+    "dependencies": {
+        "axios": "^0.27.2",
+        "dotenv": "^16.0.2",
+        "express": "^4.18.1",
+        "humps": "^2.0.1",
+        "ink": "^3.2.0",
+        "is-docker": "^3.0.0",
+        "pm2": "^5.2.0",
+        "qrcode": "^1.5.1",
+        "react": "^17.0.2",
+        "whatsapp-web.js": "^1.18.4"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.13",
+        "@types/humps": "^2.0.2",
+        "@types/mime-types": "^2.1.1",
+        "@types/node": "^18.7.15",
+        "@types/node-fetch": "^2.6.2",
+        "@types/qrcode": "^1.5.0",
+        "@types/react": "^18.0.20",
+        "@typescript-eslint/eslint-plugin": "^5.36.2",
+        "@typescript-eslint/parser": "^5.36.2",
+        "eslint": "^8.23.0",
+        "husky": "^8.0.1",
+        "mime-types": "^2.1.35",
+        "nodemon": "^2.0.19",
+        "prettier": "^2.7.1",
+        "ts-node": "^10.9.1",
+        "typescript": "^4.8.2"
+    }
+}
