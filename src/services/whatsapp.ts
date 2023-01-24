@@ -29,7 +29,7 @@ export default class WhatsApp {
             ? {
                 headless: true,
                 args: ["--no-sandbox"],
-                executablePath: "google-chrome-stable",
+                executablePath: "/usr/bin/google-chrome-stable",
             }
             : {};
 
